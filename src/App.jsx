@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState, useEffect } from 'react'
 import FeedsPanel from './components/FeedsPanel'
 import MapView    from './components/MapView'

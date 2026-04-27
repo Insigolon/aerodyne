@@ -1,6 +1,7 @@
-// src/components/DronePanel.jsx
-import { invoke } from '@tauri-apps/api/tauri'
 import { MOCK_LOG_FILES } from '../mockData'
+import { invoke } from '@tauri-apps/api/core'
+
+
 
 // ── Single drone stat card ───────────────────────────────────────────
 function DroneCard({ drone, onToggle }) {

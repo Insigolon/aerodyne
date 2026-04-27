@@ -1,6 +1,6 @@
 // src/components/MapView.jsx
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { invoke } from '@tauri-apps/api/tauri'
+import { invoke } from '@tauri-apps/api/core'
 
 export default function MapView({ drones }) {
   const canvasRef   = useRef(null)
