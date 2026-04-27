@@ -1,4 +1,4 @@
-# Aerodyne GCS — Drone Ground Control Station
+# Aerodyne — Drone Ground Control Station
 
 Built with **Tauri 1 + React 18 + Vite**. Mock-data only; ready to wire up to Isaac Sim via Tauri events or a WebSocket bridge.
 
