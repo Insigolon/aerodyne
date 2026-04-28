@@ -315,3 +315,8 @@ button { font-family: inherit; cursor: pointer; }
 .tab.active       { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,0.06); }
 .tab:hover:not(.active) { border-color: var(--border2); color: var(--text); }
 .tab-add { border-style: dashed; font-size: 14px; padding: 3px 10px; }
+
+/* ── Tauri WebView height guard ── */
+html { height: 100dvh; }
+body, #root { height: 100%; }
+.gcs-root { height: 100dvh; }

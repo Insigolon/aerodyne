@@ -10,7 +10,6 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('Feeds')
   const [clock, setClock]         = useState('')
 
-  // Live clock
   useEffect(() => {
     const tick = () => setClock(new Date().toTimeString().slice(0, 8) + ' UTC')
     tick()
@@ -18,7 +17,6 @@ export default function App() {
     return () => clearInterval(id)
   }, [])
 
-  // Toggle drone connected state (called from DronePanel)
   const toggleDrone = id =>
     setDrones(prev =>
       prev.map(d => d.id === id ? { ...d, connected: !d.connected } : d)
@@ -28,7 +26,6 @@ export default function App() {
 
   return (
     <div className="gcs-root">
-      {/* ── Status bar ── */}
       <div className="statusbar">
         <span className="logo">◆ AERODYNE GCS</span>
         <span className="status-chip"><span className="dot green" />SYS NOMINAL</span>
@@ -40,14 +37,18 @@ export default function App() {
         <span className="clock">{clock}</span>
       </div>
 
-      {/* ── Main area ── */}
       <div className="main-area">
-        <FeedsPanel />
-        <MapView drones={drones} />
-        <DronePanel drones={drones} onToggleDrone={toggleDrone} />
+        <div className="panel-left">
+          <FeedsPanel />
+        </div>
+        <div className="panel-center">
+          <MapView drones={drones} />
+        </div>
+        <div className="panel-right">
+          <DronePanel drones={drones} onToggleDrone={toggleDrone} />
+        </div>
       </div>
 
-      {/* ── Tab bar ── */}
       <TabBar activeTab={activeTab} onSwitch={setActiveTab} />
     </div>
   )
