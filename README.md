@@ -4,34 +4,6 @@ Built with **Tauri 1 + React 18 + Vite**. Mock-data only; ready to wire up to Is
 
 ---
 
-## File structure
-
-```
-aerodyne-gcs/
-├── index.html
-├── package.json
-├── vite.config.js
-│
-├── src/
-│   ├── main.jsx                  # React entry point
-│   ├── App.jsx                   # Root layout + state
-│   ├── mockData.js               # Mock drones, log files, timeline
-│   ├── styles/
-│   │   └── main.css              # Full design system
-│   └── components/
-│       ├── FeedsPanel.jsx        # LiDAR / Radar / RGB camera canvases
-│       ├── MapView.jsx           # 2-D map, region select, mission create
-│       ├── DronePanel.jsx        # Drone stat cards + log files
-│       └── TabBar.jsx            # Chrome-style tab bar
-│
-└── src-tauri/
-    ├── Cargo.toml
-    ├── tauri.conf.json
-    └── src/
-        └── main.rs               # Tauri commands: connect/disconnect/mission
-```
-
----
 
 ## Prerequisites
 
